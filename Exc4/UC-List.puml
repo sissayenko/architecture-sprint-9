@@ -1,0 +1,17 @@
+@startuml UC-List
+
+left to right direction
+
+actor "Сотрудник отдела кредитования" as credit
+actor "Менеджер call-центра" as call
+actor "Менеджер внешнего call-центра" as call_ext
+
+usecase "UC1 - Сформировать итоговую ставку по депозитам" as calc
+usecase "UC2 - Просмотреть итоговую ставку по депозитам" as view
+usecase "UC3 - Получить итоговую ставку по депозитам" as get
+
+credit --> calc
+call --> view
+call_ext --> get
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml UC-List 
+
+title UCs Депозиты онлайн
+
+left to right direction
+
+actor "Посетитель Сайта" as visitor
+actor "Клиент Интернет-Банка" as client
+actor "Менеджер call-центра" as manager
+actor "Менеджер бэк-офиса" as back
+
+usecase "UC1 - Оформить заявку на депозит" as uc1
+usecase "UC2 - Обработать заявку на депозит" as uc2
+usecase "UC3 - Подтвердить заявку на депозит" as uc3
+
+visitor --> uc1
+manager --> uc2
+back --> uc3
+
+client -left-|> visitor
+
+@enduml
